@@ -80,4 +80,4 @@ function increaseGreenByBlue(a) {
   a[GREEN] = keepInBounds(a[BLUE] + a[GREEN]);
 }
 
-// CHALLENGE code goes below here
+// CHALLENGE code goes below herew
