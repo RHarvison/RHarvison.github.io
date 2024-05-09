@@ -6,10 +6,10 @@
 // THE CONSTANTS BELOW MAY BE ALTERED FOR EXPERIMENTATION PURPOSES
 
 // set the delay between each sort step
-const SLEEP_AMOUNT = 500;
+const SLEEP_AMOUNT = 0.001;
 
 // set the max number of squares
-const MAX_SQUARES = 16;
+const MAX_SQUARES = 100;
 
 // set constants for pseudo-random number generation
 const SEED = 2;
@@ -57,10 +57,10 @@ var bubbleSort, quickSort;
 $(document).ready(function(){
     // resize the containers to fit everything
     let squareHeight = $(bubbleId).width() * (Math.min((1 / MAX_SQUARES * 100), MAX_SQUARE_WIDTH)/100);
-    
+   
     $(bubbleId).height(squareHeight*MAX_SQUARES);
     $(quickId).height(squareHeight*MAX_SQUARES);
-    
+   
     // create the two lists and all elements
     generateList(bubbleList, bubbleId, bubbleClass, bubbleElementBaseId);
     generateList(quickList, quickId, quickClass, quickElementBaseId);
@@ -108,7 +108,7 @@ function createAndAddElement(list, listId, cssClass, baseId, value){
 
     let offset = list.length / MAX_SQUARES * 100;
     list.push(newElement);
-    
+   
     $("<div>").addClass(cssClass)
               .addClass(elementClass)
               .attr("id", baseId+value)
